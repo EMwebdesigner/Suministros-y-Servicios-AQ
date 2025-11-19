@@ -61,7 +61,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Contacto</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Caracas, Venezuela</li>
+              <li>Sector 15, San Jacinto, Zulia, Venezuela</li>
               <li>+58 412-XXX-XXXX</li>
               <li>info@serviciosaq.com</li>
             </ul>

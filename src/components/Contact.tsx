@@ -43,7 +43,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-lg mb-2 text-foreground">Dirección</h3>
                   <p className="text-muted-foreground">
-                    Caracas, Venezuela
+                    Sector 15, San Jacinto, Zulia, Venezuela
                     <br />
                     RIF: J4047219881
                   </p>
@@ -152,13 +152,13 @@ const Contact = () => {
 
         <div className="mt-12 rounded-xl overflow-hidden border border-border h-96">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251637.95196238213!2d-66.86905401927446!3d10.480593957492891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C%20Venezuela!5e0!3m2!1sen!2sus!4v1637000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31403.27!2d-71.5!3d9.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7d5d9c9c9c9c9d%3A0x1234567890abcdef!2sSector%2015%2C%20San%20Jacinto%2C%20Zulia%2C%20Venezuela!5e0!3m2!1ses!2sus!4v1637000000000!5m2!1ses!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            title="Ubicación"
+            title="Ubicación - Sector 15, San Jacinto, Zulia"
           />
         </div>
       </div>
