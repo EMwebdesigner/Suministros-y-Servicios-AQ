@@ -4,43 +4,43 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
-    title: "Instalación Residencial Premium",
-    category: "Residencial",
-    description: "Sistema eléctrico completo para casa de 300m²",
+    title: "Energía de Respaldo y Generación Híbrida Agropecuaria",
+    category: "Industrial / Agropecuario",
+    description: "Suministro e instalación de generadores eléctricos, tableros de transferencia automática y sistemas fotovoltaicos para viviendas rurales e instalaciones agropecuarias, garantizando continuidad energética para equipos y servicios esenciales.",
   },
   {
     id: 2,
-    title: "Iluminación LED Comercial",
-    category: "Comercial",
-    description: "Modernización de oficinas corporativas",
+    title: "Electrificación Integral Agropecuaria",
+    category: "Industrial / Agropecuario",
+    description: "Provisión de energía desde red o transformador para viviendas rurales, sistemas de bombeo, riego y tableros eléctricos.",
   },
   {
     id: 3,
-    title: "Planta Industrial",
+    title: "Electrotecnia y Mantenimiento de Puente Grúa",
     category: "Industrial",
-    description: "Instalación trifásica para línea de producción",
+    description: "Servicio electrotécnico integral en puente grúa industrial, incluyendo mantenimiento eléctrico y mecánico, diagnóstico de fallas y puesta a punto del sistema.",
   },
   {
     id: 4,
-    title: "Mantenimiento Preventivo",
+    title: "Instalación Trifásica para Planta Industrial",
     category: "Industrial",
-    description: "Servicio anual para complejo industrial",
+    description: "Ejecución de instalación eléctrica trifásica para planta industrial, incluyendo tableros de potencia y sistemas de protección.",
   },
   {
     id: 5,
-    title: "Remodelación Eléctrica",
-    category: "Comercial",
-    description: "Actualización completa de centro comercial",
+    title: "Mantenimiento Eléctrico Industrial Preventivo",
+    category: "Industrial",
+    description: "Plan de mantenimiento preventivo en instalaciones industriales, enfocado en continuidad operativa y seguridad eléctrica.",
   },
   {
     id: 6,
-    title: "Casa Inteligente",
-    category: "Residencial",
-    description: "Domótica y automatización residencial",
+    title: "Iluminación LED y Tableros Comerciales",
+    category: "Comercial",
+    description: "Modernización del sistema eléctrico e iluminación LED en oficinas comerciales, optimizando consumo energético y seguridad operativa.",
   },
 ];
 
-const categories = ["Todos", "Residencial", "Comercial", "Industrial"];
+const categories = ["Todos", "Industrial", "Industrial / Agropecuario", "Comercial"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
