@@ -1,42 +1,55 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
+import projectAgroBackup from "@/assets/project-agro-backup.jpg";
+import projectAgroElectrification from "@/assets/project-agro-electrification.jpg";
+import projectCrane from "@/assets/project-crane.jpg";
+import projectIndustrial from "@/assets/project-industrial.jpg";
+import projectMaintenance from "@/assets/project-maintenance.jpg";
+import projectCommercial from "@/assets/project-commercial.jpg";
+
 const projects = [
   {
     id: 1,
     title: "Energía de Respaldo y Generación Híbrida Agropecuaria",
     category: "Industrial / Agropecuario",
     description: "Suministro e instalación de generadores eléctricos, tableros de transferencia automática y sistemas fotovoltaicos para viviendas rurales e instalaciones agropecuarias, garantizando continuidad energética para equipos y servicios esenciales.",
+    image: projectAgroBackup,
   },
   {
     id: 2,
     title: "Electrificación Integral Agropecuaria",
     category: "Industrial / Agropecuario",
     description: "Provisión de energía desde red o transformador para viviendas rurales, sistemas de bombeo, riego y tableros eléctricos.",
+    image: projectAgroElectrification,
   },
   {
     id: 3,
     title: "Electrotecnia y Mantenimiento de Puente Grúa",
     category: "Industrial",
     description: "Servicio electrotécnico integral en puente grúa industrial, incluyendo mantenimiento eléctrico y mecánico, diagnóstico de fallas y puesta a punto del sistema.",
+    image: projectCrane,
   },
   {
     id: 4,
     title: "Instalación Trifásica para Planta Industrial",
     category: "Industrial",
     description: "Ejecución de instalación eléctrica trifásica para planta industrial, incluyendo tableros de potencia y sistemas de protección.",
+    image: projectIndustrial,
   },
   {
     id: 5,
     title: "Mantenimiento Eléctrico Industrial Preventivo",
     category: "Industrial",
     description: "Plan de mantenimiento preventivo en instalaciones industriales, enfocado en continuidad operativa y seguridad eléctrica.",
+    image: projectMaintenance,
   },
   {
     id: 6,
     title: "Iluminación LED y Tableros Comerciales",
     category: "Comercial",
     description: "Modernización del sistema eléctrico e iluminación LED en oficinas comerciales, optimizando consumo energético y seguridad operativa.",
+    image: projectCommercial,
   },
 ];
 
@@ -85,10 +98,13 @@ const Projects = () => {
               key={project.id}
               className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.4)] hover:-translate-y-2"
             >
-              <div className="h-48 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary/30">
-                  {project.id}
-                </div>
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="p-6">
                 <span className="inline-block px-3 py-1 text-xs font-semibold bg-accent/20 text-accent rounded-full mb-3">
