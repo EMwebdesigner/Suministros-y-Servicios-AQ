@@ -61,9 +61,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Contacto</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Sector 15, San Jacinto, Zulia, Venezuela</li>
-              <li>+58 412-XXX-XXXX</li>
-              <li>info@serviciosaq.com</li>
+              <li>San Jacinto, Sector 15 - Av. 5, Edo. Zulia</li>
+              <li>0424-653-6010</li>
+              <li>antonioquerales30@hotmail.com</li>
             </ul>
           </div>
 
@@ -107,6 +107,17 @@ const Footer = () => {
           <p>
             © {new Date().getFullYear()} Servicios y Suministros A-Q, C.A. Todos
             los derechos reservados.
+          </p>
+          <p className="pt-4">
+              Code by{" "}
+              <a
+                href="https://em-webdesigner.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground hover:text-primary transition-colors"
+              >
+                EMwebdesigner
+              </a>
           </p>
         </div>
       </div>

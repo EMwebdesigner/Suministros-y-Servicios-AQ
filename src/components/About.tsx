@@ -13,7 +13,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 text-center md:text-left lg:text-left">
           <div className="space-y-6 animate-slide-up">
             <h3 className="text-3xl font-bold text-foreground">
               Nuestra Historia
@@ -31,22 +31,30 @@ const About = () => {
 
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-card p-6 rounded-xl border-2 border-border hover:border-primary transition-all hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.3)]">
-              <Award className="text-accent mb-4" size={40} />
+              <div className="flex justify-center md:justify-start">
+                <Award className="text-accent mb-4" size={40} />
+              </div>
               <h4 className="font-bold text-2xl mb-2 text-foreground">20+</h4>
               <p className="text-muted-foreground">Años de experiencia en el sector eléctrico</p>
             </div>
             <div className="bg-card p-6 rounded-xl border-2 border-border hover:border-primary transition-all hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.3)]">
-              <Users className="text-accent mb-4" size={40} />
+              <div className="flex justify-center md:justify-start">
+                <Users className="text-accent mb-4" size={40} />
+              </div>
               <h4 className="font-bold text-2xl mb-2 text-foreground">500+</h4>
               <p className="text-muted-foreground">Clientes satisfechos en hogares, comercios e industrias</p>
             </div>
             <div className="bg-card p-6 rounded-xl border-2 border-border hover:border-primary transition-all hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.3)]">
-              <Target className="text-accent mb-4" size={40} />
+              <div className="flex justify-center md:justify-start">
+                <Target className="text-accent mb-4" size={40} />
+              </div>
               <h4 className="font-bold text-2xl mb-2 text-foreground">1000+</h4>
               <p className="text-muted-foreground">Proyectos completados en obras, mantenimiento y servicios técnicos</p>
             </div>
             <div className="bg-card p-6 rounded-xl border-2 border-border hover:border-primary transition-all hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.3)]">
-              <Heart className="text-accent mb-4" size={40} />
+              <div className="flex justify-center md:justify-start">
+                <Heart className="text-accent mb-4" size={40} />
+              </div>
               <h4 className="font-bold text-2xl mb-2 text-foreground">100%</h4>
               <p className="text-muted-foreground">Compromiso con la calidad y la seguridad</p>
             </div>

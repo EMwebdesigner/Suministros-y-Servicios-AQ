@@ -43,7 +43,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-lg mb-2 text-foreground">Dirección</h3>
                   <p className="text-muted-foreground">
-                    Sector 15, San Jacinto, Zulia, Venezuela
+                    San Jacinto, Sector 15 - Avenida 5, Edo. Zulia
                     <br />
                     RIF: J4047219881
                   </p>
@@ -56,8 +56,8 @@ const Contact = () => {
                 <Phone className="text-accent mt-1" size={24} />
                 <div>
                   <h3 className="font-bold text-lg mb-2 text-foreground">Teléfono</h3>
-                  <p className="text-muted-foreground">+58 412-XXX-XXXX</p>
-                  <p className="text-muted-foreground">+58 414-XXX-XXXX</p>
+                  <p className="text-muted-foreground">0424-653-6010</p>
+                  {/* <p className="text-muted-foreground">+58 414-XXX-XXXX</p> */}
                 </div>
               </div>
             </div>
@@ -67,8 +67,8 @@ const Contact = () => {
                 <Mail className="text-accent mt-1" size={24} />
                 <div>
                   <h3 className="font-bold text-lg mb-2 text-foreground">Email</h3>
-                  <p className="text-muted-foreground">info@serviciosaq.com</p>
-                  <p className="text-muted-foreground">ventas@serviciosaq.com</p>
+                  <p className="text-muted-foreground">antonioquerales30@hotmail.com</p>
+                  {/* <p className="text-muted-foreground">ventas@serviciosaq.com</p> */}
                 </div>
               </div>
             </div>
