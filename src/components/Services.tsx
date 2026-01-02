@@ -225,19 +225,29 @@ const Services = () => {
             brindarte la mejor solución para tu proyecto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={scrollToContact}
-              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground font-bold px-8 py-3 text-lg shadow-[0_0_20px_hsl(var(--electric-orange)/0.4)] hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.6)] transition-all"
+            <a
+              href="https://wa.me/584246536010?text=Hola%2C%20buen%20día.%20Me%20comunico%20para%20solicitar%20asesoramiento%20sobre%20una%20instalación%20eléctrica.%20Quisiera%20conocer%20la%20mejor%20solución%20según%20mi%20necesidad.%20Muchas%20gracias."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Solicitar Asesoramiento
-            </Button>
-            <Button
-              onClick={scrollToContact}
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 font-bold px-8 py-3 text-lg"
+              <Button
+                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground font-bold px-8 py-3 text-lg shadow-[0_0_20px_hsl(var(--electric-orange)/0.4)] hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.6)] transition-all"
+              >
+                Solicitar Asesoramiento
+              </Button>
+            </a>
+            <a
+              href="https://wa.me/584246536010?text=Hola%2C%20buen%20día.%20Estoy%20interesado%20en%20solicitar%20un%20presupuesto%20para%20un%20trabajo%20eléctrico.%20Me%20gustaría%20recibir%20asesoramiento%20según%20el%20tipo%20de%20instalación%20que%20necesito.%20Gracias."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Pedir Presupuesto
-            </Button>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 font-bold px-8 py-3 text-lg"
+              >
+                Pedir Presupuesto
+              </Button>
+            </a>
           </div>
         </div>
       </div>
