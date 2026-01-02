@@ -152,7 +152,7 @@ const Contact = () => {
 
         <div className="mt-12 rounded-xl overflow-hidden border border-border h-96">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31403.27!2d-71.5!3d9.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7d5d9c9c9c9c9d%3A0x1234567890abcdef!2sSector%2015%2C%20San%20Jacinto%2C%20Zulia%2C%20Venezuela!5e0!3m2!1ses!2sus!4v1637000000000!5m2!1ses!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-71.6290226!3d10.7135790!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQyJzQ4LjkiTiA3McKwMzcnNDQuNSJX!5e0!3m2!1ses!2sve!4v1704200000000!5m2!1ses!2sve"
             width="100%"
             height="100%"
             style={{ border: 0 }}
