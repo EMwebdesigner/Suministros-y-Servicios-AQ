@@ -1,4 +1,5 @@
-import { Zap, Sun, Factory } from "lucide-react";
+import { Zap, Sun, Factory, Wrench, Settings, Cable } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -6,17 +7,37 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import serviceElectricalImg from "@/assets/service-electrical.jpg";
+import serviceBackupImg from "@/assets/service-backup.jpg";
+import serviceIndustrialImg from "@/assets/service-industrial.jpg";
 
-const services = [
+interface ServiceSection {
+  title: string;
+  icon: LucideIcon;
+  items: string[];
+}
+
+interface Service {
+  id: string;
+  icon: LucideIcon;
+  title: string;
+  shortDescription: string;
+  image: string;
+  sections: ServiceSection[];
+}
+
+const services: Service[] = [
   {
     id: "electricos",
     icon: Zap,
     title: "Servicios Eléctricos Integrales",
     shortDescription:
       "Obras, reparaciones y mantenimiento de instalaciones eléctricas, cumpliendo normas de seguridad y calidad.",
+    image: serviceElectricalImg,
     sections: [
       {
         title: "Obras e instalaciones eléctricas",
+        icon: Wrench,
         items: [
           "Instalaciones eléctricas nuevas",
           "Cableado, tomas e interruptores",
@@ -27,6 +48,7 @@ const services = [
       },
       {
         title: "Reparaciones eléctricas",
+        icon: Cable,
         items: [
           "Detección y resolución de fallas",
           "Reparación de tableros, circuitos y luminarias",
@@ -35,6 +57,7 @@ const services = [
       },
       {
         title: "Mantenimiento eléctrico",
+        icon: Settings,
         items: [
           "Mantenimiento preventivo y correctivo",
           "Revisión general de instalaciones",
@@ -50,9 +73,11 @@ const services = [
     title: "Sistemas de Respaldo Energético",
     shortDescription:
       "Soluciones para garantizar la continuidad del suministro eléctrico ante cortes de energía.",
+    image: serviceBackupImg,
     sections: [
       {
         title: "Generadores eléctricos de respaldo",
+        icon: Wrench,
         items: [
           "Proyecto e instalación de generadores",
           "Generadores con motor a combustión",
@@ -63,6 +88,7 @@ const services = [
       },
       {
         title: "Sistemas solares fotovoltaicos",
+        icon: Sun,
         items: [
           "Proyecto e instalación de paneles solares",
           "Sistemas solares como respaldo energético",
@@ -79,9 +105,11 @@ const services = [
     title: "Electrotecnia Industrial y Puentes Grúa",
     shortDescription:
       "Servicio técnico especializado en electricidad y mecánica aplicada a equipos industriales.",
+    image: serviceIndustrialImg,
     sections: [
       {
         title: "Mantenimiento eléctrico y mecánico de puentes grúa",
+        icon: Settings,
         items: [
           "Diagnóstico y reparación de fallas",
           "Reparación de sistemas de potencia",
@@ -119,54 +147,70 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group bg-card rounded-2xl border border-border p-6 transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--electric-orange)/0.4)] hover:scale-[1.02] hover:-translate-y-2 hover:border-primary/50"
+              className="group rounded-2xl overflow-hidden border border-border transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--electric-orange)/0.5)] hover:scale-[1.02] hover:-translate-y-2 hover:border-primary/50"
             >
-              {/* Icon & Title */}
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-colors">
-                  <service.icon className="w-8 h-8 text-accent" />
+              {/* Image Header */}
+              <div className="relative h-48">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/20 backdrop-blur-sm">
+                      <service.icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-foreground leading-tight">
-                  {service.title}
-                </h3>
               </div>
 
-              {/* Short Description */}
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.shortDescription}
-              </p>
+              {/* Content */}
+              <div className="bg-card p-6">
+                {/* Short Description */}
+                <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+                  {service.shortDescription}
+                </p>
 
-              {/* Accordion */}
-              <Accordion type="single" collapsible className="w-full">
-                {service.sections.map((section, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`${service.id}-${index}`}
-                    className="border-border/50"
-                  >
-                    <AccordionTrigger className="hover:text-primary text-left py-3">
-                      <span className="font-semibold text-sm">
-                        {section.title}
-                      </span>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="space-y-2 pl-2">
-                        {section.items.map((item, itemIndex) => (
-                          <li
-                            key={itemIndex}
-                            className="text-muted-foreground text-sm flex items-start gap-2"
-                          >
-                            <span className="text-accent mt-0.5 flex-shrink-0">
-                              ⚡
-                            </span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+                {/* Accordion */}
+                <Accordion type="single" collapsible className="w-full">
+                  {service.sections.map((section, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`${service.id}-${index}`}
+                      className="border-border/50"
+                    >
+                      <AccordionTrigger className="hover:text-primary text-left py-3">
+                        <div className="flex items-center gap-3">
+                          <section.icon className="w-5 h-5 text-accent flex-shrink-0" />
+                          <span className="font-semibold text-sm">
+                            {section.title}
+                          </span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <ul className="space-y-2 pl-8">
+                          {section.items.map((item, itemIndex) => (
+                            <li
+                              key={itemIndex}
+                              className="text-muted-foreground text-sm flex items-start gap-2"
+                            >
+                              <span className="text-accent mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             </div>
           ))}
         </div>
