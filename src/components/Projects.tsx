@@ -18,9 +18,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "Electrificación Integral Agropecuaria",
+    title: "Infraestructura Eléctrica Agropecuaria",
     category: "Industrial / Agropecuario",
-    description: "Provisión de energía desde red o transformador para viviendas rurales, sistemas de bombeo, riego y tableros eléctricos.",
+    description: "Provisión de energía eléctrica desde red o transformador para viviendas rurales, sistemas de bombeo, riego y tableros eléctricos.",
     image: projectAgroElectrification,
   },
   {
