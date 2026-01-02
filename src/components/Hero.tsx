@@ -53,13 +53,18 @@ const Hero = () => {
             Más de 20 años brindando soluciones eléctricas certificadas
           </p>
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button
-              onClick={() => scrollToSection("contacto")}
-              size="lg"
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold text-lg shadow-[var(--glow-orange)] hover:shadow-[var(--glow-red)] transition-all"
+            <a
+              href="https://wa.me/584246536010?text=Hola%2C%20buen%20día.%20Estoy%20interesado%20en%20solicitar%20un%20presupuesto%20para%20un%20trabajo%20eléctrico.%20Me%20gustaría%20recibir%20asesoramiento%20según%20el%20tipo%20de%20instalación%20que%20necesito.%20Gracias."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Solicitar Presupuesto
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold text-lg shadow-[var(--glow-orange)] hover:shadow-[var(--glow-red)] transition-all"
+              >
+                Solicitar Presupuesto
+              </Button>
+            </a>
             <Button
               onClick={() => scrollToSection("servicios")}
               size="lg"
