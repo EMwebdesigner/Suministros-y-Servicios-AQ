@@ -13,7 +13,7 @@ const projects = [
     id: 1,
     title: "Energía de Respaldo y Generación Híbrida Agropecuaria",
     category: "Industrial / Agropecuario",
-    description: "Suministro e instalación de generadores eléctricos, tableros de transferencia automática y sistemas fotovoltaicos para viviendas rurales e instalaciones agropecuarias, garantizando continuidad energética para equipos y servicios esenciales.",
+    description: "Soluciones de energía de respaldo con generadores y sistemas fotovoltaicos para instalaciones.",
     image: projectAgroBackup,
   },
   {
