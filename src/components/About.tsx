@@ -61,7 +61,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left lg:text-left">
           <div className="bg-card p-8 rounded-xl border border-border hover:shadow-[0_0_30px_hsl(var(--electric-orange)/0.3)] transition-all">
             <h4 className="text-2xl font-bold mb-4 text-primary">Misión</h4>
             <p className="text-muted-foreground">
