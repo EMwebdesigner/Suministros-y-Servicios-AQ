@@ -18,9 +18,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "Infraestructura Eléctrica Agropecuaria",
+    title: "Automatización y Control Eléctrico para Bombas de Riego",
     category: "Industrial / Agropecuario",
-    description: "Provisión de energía eléctrica desde red o transformador para viviendas rurales, sistemas de bombeo, riego y tableros eléctricos.",
+    description: "Diseño, instalación y puesta en marcha de tableros eléctricos de fuerza y control, incorporando variadores de frecuencia (VFD) y sistemas de arranque tradicional para motores de bombas para riego.",
     image: projectAgroElectrification,
   },
   {
@@ -32,16 +32,16 @@ const projects = [
   },
   {
     id: 4,
-    title: "Instalación Trifásica para Planta Industrial",
+    title: "Sistema de Transferencia Automática (ATS)",
     category: "Industrial",
-    description: "Ejecución de instalación eléctrica trifásica para planta industrial, incluyendo tableros de potencia y sistemas de protección.",
+    description: "Diseño, instalación y puesta en marcha de un sistema de transferencia automática y manual (ATS) para grupo electrógeno, integrado a tablero eléctrico de fuerza y control, con configuración de maniobra y pruebas operativas de conmutación entre fuentes.",
     image: projectIndustrial,
   },
   {
     id: 5,
-    title: "Mantenimiento Eléctrico Industrial Preventivo",
+    title: "Mantenimiento de Sistema Eléctrico de Respaldo (Preventivo y Correctivo)",
     category: "Industrial",
-    description: "Plan de mantenimiento preventivo en instalaciones industriales, enfocado en continuidad operativa y seguridad eléctrica.",
+    description: "Mantenimiento preventivo y correctivo de la parte eléctrica de un sistema de respaldo, incluyendo revisión de tableros, conexiones y pruebas operativas.",
     image: projectMaintenance,
   },
   {
