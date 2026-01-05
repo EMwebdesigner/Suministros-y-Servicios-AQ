@@ -70,19 +70,22 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Síguenos</h4>
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Facebook size={24} />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/serviciosysuministros.aq/"
+                target="_blank"
+                rel="noopener noreferrer" 
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Contactar por Instagram"
               >
                 <Instagram size={24} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
@@ -93,7 +96,7 @@ const Footer = () => {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Linkedin size={24} />
-              </a>
+              </a> */}
             </div>
             <div className="mt-6">
               <p className="text-sm text-muted-foreground font-semibold">
