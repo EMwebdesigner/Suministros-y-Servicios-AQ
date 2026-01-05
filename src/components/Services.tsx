@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import serviceElectricalImg from "@/assets/service-electrical.jpg";
+import serviceElectricalImg from "@/assets/service-electrical-new.jpg";
 import serviceBackupImg from "@/assets/service-backup-new.jpg";
 import serviceIndustrialImg from "@/assets/service-industrial-new.jpg";
 
