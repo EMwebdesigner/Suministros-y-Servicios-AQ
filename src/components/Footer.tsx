@@ -114,7 +114,7 @@ const Footer = () => {
           <p className="pt-4">
               Code by{" "}
               <a
-                href="https://em-webdesigner.netlify.app/"
+                href="https://emwebdesigner.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-foreground hover:text-primary transition-colors"
