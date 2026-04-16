@@ -14,13 +14,61 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // ✅ NUEVO: estado para manejar el envío (loading)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensaje Enviado",
-      description: "Nos pondremos en contacto con usted pronto.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+
+    // ✅ NUEVO: activamos estado de carga
+    setIsSubmitting(true);
+
+    try {
+      // ✅ NUEVO: enviamos los datos a Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // ✅ NUEVO: access_key vincula el formulario al email destino (endertucon3@gmail.com)
+          access_key: "a277320c-4cd3-46da-8c72-16c6f0f0e4f1",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          // ✅ NUEVO: subject define el asunto del email que recibís en tu casilla
+          subject: `Nuevo mensaje de ${formData.name}`,
+        }),
+      });
+
+      // ✅ NUEVO: verificamos si el envío fue exitoso
+      if (response.ok) {
+        toast({
+          title: "Mensaje Enviado",
+          description: "Nos pondremos en contacto con usted pronto.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        // ✅ NUEVO: mostramos error si Web3Forms devuelve un status de error
+        toast({
+          title: "Error al enviar",
+          description: "Por favor intentá de nuevo o contactanos directamente.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      // ✅ NUEVO: manejamos errores de red
+      toast({
+        title: "Error de conexión",
+        description: "Verificá tu conexión a internet e intentá nuevamente.",
+        variant: "destructive",
+      });
+    } finally {
+      // ✅ NUEVO: desactivamos el estado de carga sin importar el resultado
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -140,11 +188,13 @@ const Contact = () => {
                   className="bg-background border-border resize-none"
                 />
               </div>
+              {/* ✅ NUEVO: botón deshabilitado mientras se envía + texto dinámico */}
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold text-lg"
               >
-                Enviar Mensaje
+                {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
               </Button>
             </form>
           </div>
